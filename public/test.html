@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试option-window</title>
+</head>
+
+<style>
+    .categoryList ul{
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .categoryList ul li {
+        width: 100%;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tip-window {
+        position: absolute;
+        top:100%;
+        margin-top: 11px;
+        left: 50%;
+        width: 200px;
+        margin-left: -100px;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, .2);
+        z-index: 300;
+    }
+
+    .tip-arrow {
+        left: 50%;
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        top: -11px;
+        border-width: 11px;
+        margin-left: -11px;
+        border-top-width: 0;
+        border-color: transparent;
+        border-bottom-color: rgba(0, 0, 0, .25);
+        border-style: solid;
+    }
+
+    .tip-arrow:after {
+        position: absolute;
+        top: 1px;
+        margin-left: -10px;
+        content: " ";
+        border-width: 10px;
+        border-top-width: 0;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-bottom-color: #fff;
+        border-style: solid;
+        box-sizing: border-box;
+    }
+
+    .example {
+        height: 20px;
+        margin-top: 400px;
+        width: 200px;
+        border: 1px solid red;
+        position: relative;
+    }
+</style>
+
+<body>
+
+<div class="example">
+    <div class="tip-window">
+        <div class="tip-arrow"></div>
+        <div class="categoryList">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
